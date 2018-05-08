@@ -21,11 +21,11 @@
 json解析这里真是坑点满满，虽然也有很大部分是因为我对正则表达式不熟悉，都是边写边查的，但是Java中转义符号的坑也是很大的，就比如JSONObject对象调用getString返回的字符和toString的字符居然不一样，斜线有对应的转换，很坑啊。
 
 ### 成功展示
-![1](https://github.com/Neocou/Zhihu-Picture-Crawler/blob/master/pic/1.png)
+![1](https://raw.githubusercontent.com/Neocou/Zhihu-Picture-Crawler/master/pic/1.png)
 
-![2](https://github.com/Neocou/Zhihu-Picture-Crawler/blob/master/pic/2.png)
+![2](https://raw.githubusercontent.com/Neocou/Zhihu-Picture-Crawler/master/pic/2.png)
 
-![3](https://github.com/Neocou/Zhihu-Picture-Crawler/blob/master/pic/3.png)
+![3](https://raw.githubusercontent.com/Neocou/Zhihu-Picture-Crawler/master/pic/3.png)
 
 ### 项目后续
 预计后期加入多问题爬取，如果有兴趣以及时间的话可以搞成一个spring boot项目，网页直接添加任务。
