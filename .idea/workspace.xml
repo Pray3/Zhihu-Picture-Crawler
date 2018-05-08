@@ -24,8 +24,8 @@
       <file leaf-file-name="JsonAnalysis.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/crwaler/download/JsonAnalysis.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="74" column="67" selection-start-line="74" selection-start-column="58" selection-end-line="74" selection-end-column="67" />
+            <state relative-caret-position="36">
+              <caret line="65" column="17" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -62,7 +62,7 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="2071" />
     <option name="y" value="62" />
     <option name="width" value="1767" />
@@ -231,15 +231,15 @@
       <updated>1525762325951</updated>
       <workItem from="1525762327403" duration="198000" />
       <workItem from="1525762591875" duration="80000" />
-      <workItem from="1525762706078" duration="637000" />
+      <workItem from="1525762706078" duration="956000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="915000" />
+    <option name="totallyTimeSpent" value="1234000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="2071" y="62" width="1767" height="919" extended-state="0" />
+    <frame x="2071" y="62" width="1767" height="919" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -311,8 +311,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/crwaler/download/JsonAnalysis.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="74" column="67" selection-start-line="74" selection-start-column="58" selection-end-line="74" selection-end-column="67" />
+        <state relative-caret-position="36">
+          <caret line="65" column="17" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
         </state>
       </provider>
     </entry>
