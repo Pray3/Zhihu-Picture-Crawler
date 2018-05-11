@@ -57,7 +57,7 @@ public static void closeTask(){
             path.mkdirs();
         }
         for(String pic:content.getPictures()){
-            HttpService.downloadEachPic(flag,pic,MyCrawler.name,MyCrawler.value);
+            HttpService.downloadEachPic(flag,pic);
         }
     }
 
@@ -68,7 +68,7 @@ public static void closeTask(){
      */
     public static List<AnswerContent> getContent(String url){
         Pattern contentPattern = Pattern.compile("data-original=\\\"(https://.*?.zhimg.com.*?_r.jpg)");//图片地址匹配
-        JSONArray array = HttpService.httpGet(url,MyCrawler.name,MyCrawler.value).getJSONArray("data");
+        JSONArray array = HttpService.httpGetAfterLogin(url).getJSONArray("data");
         List<AnswerContent> result = new ArrayList<>();
         for(int i=0;i<array.size();i++){
             JSONObject json = array.getJSONObject(i);
@@ -93,13 +93,18 @@ public static void closeTask(){
         return result;
     }
 
+
     /**
      * 获取该问题回答总数，以用于遍历所有回答
      * @param url
      * @return
      */
     public static Integer getCount(String url){
-        Integer count = HttpService.httpGet(url,MyCrawler.name,MyCrawler.value).getJSONObject("paging").getInteger("totals");
+        Integer count=0;
+        JSONObject json= HttpService.httpGetAfterLogin(url);
+        if(json!=null){
+            count = json.getJSONObject("paging").getInteger("totals");
+        }
         return count;
     }
 
@@ -109,7 +114,11 @@ public static void closeTask(){
      * @return
      */
     public  static String getTitle(String url){
-        String title = HttpService.httpGet(url,MyCrawler.name,MyCrawler.value).getJSONArray("data").getJSONObject(0).getJSONObject("question").getString("title");
+        String title = "";
+        JSONObject json= HttpService.httpGetAfterLogin(url);
+        if(json!=null){
+            title = json.getJSONArray("data").getJSONObject(0).getJSONObject("question").getString("title");
+        }
         return title==null?null:FilePattern.matcher(title).replaceAll("");//非法字符排除
     }
 }
