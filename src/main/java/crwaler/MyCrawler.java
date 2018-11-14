@@ -15,16 +15,14 @@ public class MyCrawler {
     static Logger log = Logger.getLogger(MyCrawler.class.getName());
 
     public static void main(String[] args) throws CloneNotSupportedException {
-        boolean status = ZhihuLogin.login("phone_num","password",true);
-        if(status){
-            ZhihuUrl url = new ZhihuUrl("22132862",20,0);
+            ZhihuUrl url = new ZhihuUrl("297715922",20,0);
             startCrawler(url);
-        }
 
     }
 
     public static void startCrawler(ZhihuUrl url){
         totals = JsonAnalysis.getCount(url.getAddress());//获取任务总数，也可以使用默认50条回答
+        log.debug("下载目标地址："+url.getAddress());
         questionTitle = JsonAnalysis.getTitle(url.getAddress());
         if(totals!=null&&questionTitle!=null){
             log.info("下载问题："+questionTitle+"---------回答总数："+totals);

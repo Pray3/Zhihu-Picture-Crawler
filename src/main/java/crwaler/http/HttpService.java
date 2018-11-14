@@ -216,6 +216,7 @@ public class HttpService {
             HttpResponse resp = client.execute(get);
             Header[] headers =  resp.getHeaders(headerName);
             log.debug("获取header"+headers);
+            return headers;
         } catch (IOException e) {
             log.debug("获取header失败");
         }
