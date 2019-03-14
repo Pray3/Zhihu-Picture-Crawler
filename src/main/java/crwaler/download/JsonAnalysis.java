@@ -31,7 +31,7 @@ public class JsonAnalysis {
      * @param answers
      */
     public static void downloadContent(List<AnswerContent> answers){
-        for(AnswerContent ans:answers){
+        for(final AnswerContent ans:answers){
             pool.submit(new Runnable(){
                 @Override
                 public void run() {

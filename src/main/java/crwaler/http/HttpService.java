@@ -19,6 +19,7 @@ import org.apache.http.message.BasicNameValuePair;
 import org.apache.http.util.EntityUtils;
 import org.apache.log4j.Logger;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -99,10 +100,15 @@ public class HttpService {
             if (response.getStatusLine().getStatusCode() == HttpStatus.SC_OK) {
                 HttpEntity entity = response.getEntity();
                 byte[] data = EntityUtils.toByteArray(entity);
+                String dir = path.substring(0, path.lastIndexOf("/"));
+                File file = new File(dir);
+                if (!file.exists()){
+                    file.mkdirs();
+                }
                 FileOutputStream fos = new FileOutputStream(path);
                 fos.write(data);
                 fos.close();
-                log.debug(Thread.currentThread().getName()+"下载文件:"+path+"成功");
+                log.info(Thread.currentThread().getName()+"下载文件:"+path+"成功");
             }
         } catch (IOException e) {
             log.error("下载图片失败："+url+" 错误信息："+e.getMessage());

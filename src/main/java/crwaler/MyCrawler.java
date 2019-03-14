@@ -9,13 +9,13 @@ import org.apache.log4j.Logger;
 import java.util.List;
 
 public class MyCrawler {
-    public static String  base = "E:/zhihu";//保存图片地址
+    public static String  base = "C:/zhihu";//保存图片地址
     public static String questionTitle;//问题标题
     static Integer totals = 50;
     static Logger log = Logger.getLogger(MyCrawler.class.getName());
 
     public static void main(String[] args) throws CloneNotSupportedException {
-            ZhihuUrl url = new ZhihuUrl("297715922",20,0);
+            ZhihuUrl url = new ZhihuUrl("64095822",20,0);
             startCrawler(url);
 
     }
